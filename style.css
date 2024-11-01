@@ -1,0 +1,140 @@
+
+.slick-dots li button::before {
+    font-family: slick;
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    content: "•";
+    text-align: center;
+    opacity: 0.25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+.slick-dots li.slick-active button::before {
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* arraw */
+.slick-prev::before,
+.slick-next::before {
+    color: rgba(3, 3, 3, 0.897);
+    font-size: 2.5rem;
+}
+
+.slick-prev,
+.slick-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 2;
+}
+
+.slick-list {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slick-prev {
+    left:0px;
+}
+
+.slick-next {
+    right:0px;
+}
+
+.your-class div img{
+    height: 500px;
+    width: 100%;
+}
+
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+.container #more {
+  display: none;
+}
+.container .more .card {
+  animation: view-cards both linear;
+  animation-timeline: view(y 90dvh auto);
+
+}
+.container:not(:has(input[type=checkbox]:checked)) .more {
+  display: none;
+}
+
+@keyframes view-cards {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*
+ *
+ * demo
+ * 
+*/
+
+
+.container {
+  max-width: 80vw;
+  margin-block: 10vh;
+  margin-inline: auto;
+}
+.container .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+}
+.container .cards .card {
+  min-height: 25dvh;
+  display: grid;
+  place-content: center;
+  background-color: var(--stop-color-2);
+ background: #fff;
+  color: #666;
+  transition: scale 200ms;
+  /* 			img {
+  	display: block;
+  	object-fit: cover;
+  } */
+}
+.container .cards .card:hover {
+  scale: 1.1;
+  z-index: 1;
+}
+.container .show-more-cards {
+  margin-block: 1rem;
+  text-align: center;
+}
+.container .show-more-cards label {
+  display: inline-flex;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #ec0f0f;
+  border: 2px solid #ffffff66;
+  border-radius: 0.35rem;
+  transition: scale 200ms;
+}
+.container .show-more-cards label:hover {
+  scale: 1.4;
+}
+
+
+
+
